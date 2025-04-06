@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auth Flow</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./SignUp.css">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <div class="auth-container" id="authContainer">
+        <!-- Sign In Form -->
+        <div class="form-container sign-in-form">
+            <div class="form-header">
+                <h1>Welcome back</h1>
+                <p>Sign in to access your account</p>
+            </div>
+
+            <div class="toggle-container">
+                <div class="toggle-btn active" id="signInToggle">Sign In</div>
+                <div class="toggle-btn" id="signUpToggle">Sign Up</div>
+            </div>
+
+            <form id="signInForm">
+                <div class="input-group">
+                    <label for="signInEmail">Email</label>
+                    <input type="email" id="signInEmail" placeholder="Enter your email" required>
+                    <i class="fas fa-envelope icon"></i>
+                </div>
+
+                <div class="input-group">
+                    <label for="signInPassword">Password</label>
+                    <input type="password" id="signInPassword" placeholder="Enter your password" required>
+                    <i class="fas fa-lock icon"></i>
+                </div>
+
+                <div class="remember-forgot">
+                    <div class="remember-me">
+                        <input type="checkbox" id="rememberMe">
+                        <label for="rememberMe">Remember me</label>
+                    </div>
+                    <div class="forgot-password">
+                        <a href="#">Forgot password?</a>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Sign In</button>
+            </form>
+
+            <div class="divider">or continue with</div>
+
+            <div class="social-login">
+                <button type="button" class="social-btn google">
+                    <i class="fab fa-google"></i>
+                    <span>Google</span>
+                </button>
+                <button type="button" class="social-btn facebook">
+                    <i class="fab fa-facebook-f"></i>
+                    <span>Facebook</span>
+                </button>
+                <button type="button" class="social-btn apple">
+                    <i class="fab fa-apple"></i>
+                    <span>Apple</span>
+                </button>
+            </div>
+
+            <div class="form-footer">
+                Don't have an account? <a href="#" id="switchToSignUp">Sign up</a>
+            </div>
+        </div>
+
+        <!-- Sign Up Form -->
+        <div class="form-container sign-up-form">
+            <div class="form-header">
+                <h1>Create account</h1>
+                <p>Get started with your free account</p>
+            </div>
+
+            <div class="toggle-container">
+                <div class="toggle-btn" id="signInToggle2">Sign In</div>
+                <div class="toggle-btn active" id="signUpToggle2">Sign Up</div>
+            </div>
+
+            <form id="signUpForm">
+                <div class="input-group">
+                    <label for="signUpName">Full Name</label>
+                    <input type="text" id="signUpName" placeholder="Enter your full name" required>
+                    <i class="fas fa-user icon"></i>
+                </div>
+
+                <div class="input-group">
+                    <label for="signUpEmail">Email</label>
+                    <input type="email" id="signUpEmail" placeholder="Enter your email" required>
+                    <i class="fas fa-envelope icon"></i>
+                </div>
+
+                <div class="input-group">
+                    <label for="signUpPassword">Password</label>
+                    <input type="password" id="signUpPassword" placeholder="Create a password" required>
+                    <i class="fas fa-lock icon"></i>
+                </div>
+
+                <div class="input-group">
+                    <label for="signUpConfirmPassword">Confirm Password</label>
+                    <input type="password" id="signUpConfirmPassword" placeholder="Confirm your password" required>
+                    <i class="fas fa-lock icon"></i>
+                </div>
+
+                <button type="submit" class="submit-btn">Sign Up</button>
+            </form>
+
+            <div class="divider">or sign up with</div>
+
+            <div class="social-login">
+                <button type="button" class="social-btn google">
+                    <i class="fab fa-google"></i>
+                    <span>Google</span>
+                </button>
+                <button type="button" class="social-btn facebook">
+                    <i class="fab fa-facebook-f"></i>
+                    <span>Facebook</span>
+                </button>
+                <button type="button" class="social-btn apple">
+                    <i class="fab fa-apple"></i>
+                    <span>Apple</span>
+                </button>
+            </div>
+
+            <div class="form-footer">
+                Already have an account? <a href="#" id="switchToSignIn">Sign in</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="./SignUp.js">
+        
+    </script>
+</body>
+</html>

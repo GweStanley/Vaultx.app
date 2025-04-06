@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automobile Registration Form</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./auto.css">
+</head>
+<body>
+    <video autoplay muted loop id="bg-video">
+        <source src="../media/cars.mp4" type="video/mp4">
+      </video>
+      
+    <div class="container mt-4">
+        <form id="registrationForm" enctype="multipart/form-data">
+            <header>
+                <h1 class="text-center">Automobile Registration</h2>
+            </header>
+        
+            
+            <h3>Vehicle Information</h3>
+
+            <div class="mb-3">
+                <label for="vin" class="form-label">VIN (Vehicle Identification Number):</label>
+                <input type="text" class="form-control" id="vin" required>
+            </div>
+
+
+            <div class="mb-3">
+                <label for="make" class="form-label">Make:</label>
+                <input type="text" class="form-control" id="make" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="model" class="form-label">Model:</label>
+                <input type="text" class="form-control" id="model" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="year" class="form-label">Year:</label>
+                <input type="number" class="form-control" id="year" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="color" class="form-label">Color:</label>
+                <input type="text" class="form-control" id="color" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="engineNumber" class="form-label">Engine Number:</label>
+                <input type="text" class="form-control" id="engineNumber" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="licensePlate" class="form-label">License Plate Number:</label>
+                <input type="text" class="form-control" id="licensePlate" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="assetValue" class="form-label">Cash Value</label>
+                <div class="input-group">
+                    <input type="number" class="form-control" id="assetValue" required>
+                    <select id="currency" class="form-select" required>
+                        <option value="XAF">Central African CFA Franc (XAF)</option>
+                        <option value="NGN">Nigerian Naira (NGN)</option>
+                        <option value="KES">Kenyan Shilling (KES)</option>
+                        <option value="ZAR">South African Rand (ZAR)</option>
+                        <option value="GHS">Ghanaian Cedi (GHS)</option>
+                        <option value="EGP">Egyptian Pound (EGP)</option>
+                        <option value="XOF">West African CFA Franc (XOF)</option>
+                        <option value="TZS">Tanzanian Shilling (TZS)</option>
+                        <option value="MAD">Moroccan Dirham (MAD)</option>
+                        <option value="DZD">Algerian Dinar (DZD)</option>
+                    </select>
+                </div>
+            </div>
+
+            <h3>Registration Details</h3>
+            <p>Custom Duties</p>
+
+            <div class="mb-3">
+                <label for="registrationNumber" class="form-label">Registration Number:</label>
+                <input type="text" class="form-control" id="registrationNumber" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="registrationDate" class="form-label">Registration Date:</label>
+                <input type="date" class="form-control" id="registrationDate" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="expirationDate" class="form-label">Expiration Date:</label>
+                <input type="date" class="form-control" id="expirationDate" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="state" class="form-label">State/Province:</label>
+                <input type="text" class="form-control" id="state" required>
+            </div>
+
+            <h3>Upload Documents & Pictures</h3>
+
+            <div class="mb-3">
+                <label for="vehiclePicture" class="form-label">Upload Vehicle Picture:</label>
+                <input type="file" class="form-control" id="vehiclePicture" accept="image/*" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="documentUpload" class="form-label">Upload Registration Document:</label>
+                <input type="file" class="form-control" id="documentUpload" accept=".pdf,.doc,.docx,.jpg,.png" required>
+            </div>
+
+            <button onclick="showAlert()">Tokenize Asset</button>            
+        </form>
+        
+        <div id="output"></div>
+        <footer>
+            <p>&copy; 2025 PathfinderLabs. All rights reserved.</p>
+        </footer>
+    </div>
+
+
+    <!-- Bootstrap JS (Optional, for Bootstrap features like modals) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./auto.js"></script>
+</body>
+</html>

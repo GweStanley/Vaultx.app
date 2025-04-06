@@ -1,0 +1,88 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 20px;
+    background-image: url(../media/electGIT.gif);
+    overflow-y: auto; 
+
+
+}
+
+.container {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    max-height: 90vh; 
+    overflow-y: auto; 
+
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.btn {
+    width: 100%;
+    margin-top: 10px;
+}
+label{
+    font-weight: 500;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+input, button {
+    margin: 10px;
+    padding: 8px;
+    font-size: 16px;
+}
+header{
+    text-align: center;
+    background-color: blue;
+    color: white;
+    border-radius: 5%;
+    text-decoration: solid;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+}
+footer{
+    text-align: center;
+    color: blue;
+    padding-top: 15px;}
+
+   .submit{
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color:blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-items: center;
+   } 
+   /* Basic CSS to make the video full-screen background */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  #bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+    

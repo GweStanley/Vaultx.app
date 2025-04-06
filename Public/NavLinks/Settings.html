@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VaultX Settings</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./settings.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Authentication Section -->
+        <div class="text-center mb-4">
+            <a href="./SignUp.html" class="btn btn-primary btn-lg">
+                <i class="fas fa-sign-in-alt me-2"></i>Sign In
+            </a>
+        </div>
+
+        <hr class="my-4">
+
+        <!-- Safety Mode Section -->
+        <div class="card">
+            <div class="header-container">
+                <h2 class="mb-0">Safety Mode</h2>
+                <label class="switch">
+                    <input type="checkbox" id="myToggle">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <p id="toggleState" class="mb-0">
+                Safety is OFF. Turn it on if you are in an unsecured environment.
+                <strong>Your account will be deactivated for 24 hours</strong>
+            </p>
+        </div>
+
+        <!-- Language Settings -->
+        <select id="languageSelect" class="form-select">
+            <option value="en">English</option>
+            <option value="fr">French</option>
+            <option value="pt">Portuguese</option>
+            <option value="ar">Arabic</option>
+            <option value="sw">Swahili</option>
+            <option value="am">Amharic (Ethiopia)</option>
+            <option value="so">Somali (Somalia)</option>
+            <option value="ber">Tamazight (Algeria)</option>
+            <option value="es">Spanish (Equatorial Guinea)</option>
+            <option value="rn">Kirundi (Burundi)</option>
+            <option value="rw">Kinyarwanda (Rwanda)</option>
+            <option value="sg">Sango (CAR)</option>
+            <option value="tn">Setswana (Botswana)</option>
+            <option value="st">Sesotho (Lesotho)</option>
+            <option value="zu">isiZulu (South Africa)</option>
+            <option value="xh">isiXhosa (South Africa)</option>
+            <option value="af">Afrikaans (South Africa)</option>
+            <option value="mg">Malagasy (Madagascar)</option>
+            <option value="dz">Dzongkha (Eswatini)</option>
+            <option value="ve">Tshivenda (South Africa)</option>
+            <option value="ts">Xitsonga (South Africa)</option>
+            <option value="ss">siSwati (Eswatini)</option>
+            <option value="ny">Chichewa (Malawi)</option>
+        </select>
+        <!-- Next of Kin Section -->
+        <div class="card">
+            <h3>Next of Kin</h3>
+            
+            <button class="btn btn-secondary mb-3" onclick="toggleNextOfKin()">
+                <i class="fas fa-user-plus me-2"></i>Set Next of Kin
+            </button>
+            
+            <div id="nextOfKinForm" class="hidden">
+                <form>
+                    <div class="mb-3">
+                        <label for="kinName" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="kinName">
+                    </div>
+                    <div class="mb-3">
+                        <label for="IdentificationSelect" class="form-label">ID Document</label>
+                        <select id="IdentificationSelect" class="form-select">
+                            <option value="NIC">National Identity Card</option>
+                            <option value="PssP">Passport</option>
+                            <option value="DL">Driving License</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="KinIDnumber" class="form-label">ID Document Number</label>
+                        <input type="number" class="form-control" id="KinIDnumber">
+                    </div>
+                    <div class="mb-3">
+                        <label for="kinContact" class="form-label">Contact</label>
+                        <input type="text" class="form-control" id="kinContact">
+                    </div>
+                    <div class="mb-3">
+                        <label for="kinRelationship" class="form-label">Relationship</label>
+                        <input type="text" class="form-control" id="kinRelationship">
+                    </div>
+                    <div class="mb-3">
+                        <label for="kinAssets" class="form-label">Assets to Inherit</label>
+                        <input type="text" class="form-control" id="kinAssets" placeholder="Paste NFT Address">
+                    </div>
+                    <button type="submit" class="btn btn-success">
+                        <i class="fas fa-save me-2"></i>Save
+                    </button>
+                </form>
+            </div>
+
+            <hr class="my-3">
+
+            <button class="btn btn-secondary" onclick="toggleNextOfKinNotify()">
+                <i class="fas fa-bell me-2"></i>When To Notify Next of Kin
+            </button>
+            
+            <div id="nextOfKinNotify" class="hidden mt-3">
+                <label for="notifyAfter" class="form-label">Set an automatic alert if inactive for 3 months</label>
+                <input type="email" class="form-control mb-2" id="notifyAfter" placeholder="Enter recipient email">
+                <input type="tel" class="form-control mb-2" id="notifyTel1" placeholder="Tel 1: +237 6123654321">
+                <input type="tel" class="form-control mb-3" id="notifyTel2" placeholder="Tel 2: +237 6123654321">
+                <button type="submit" class="btn btn-success">
+                    <i class="fas fa-save me-2"></i>Save
+                </button>
+            </div>
+        </div>
+
+        <!-- Logout Button -->
+        <div class="text-center mt-4">
+            <a href="#" onclick="if(confirm('Are you sure you want to logout?')) { alert('Logout successful'); } return false;" 
+               class="btn btn-logout">
+               <i class="fas fa-sign-out-alt me-2"></i>Logout
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 PathfinderLabs. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./settings.js"></script>
+</body>
+</html>
